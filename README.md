@@ -75,7 +75,7 @@ Set up Telegram handlers for bot commands (`/start` command).
 
 Created my own Telegram channel for testing notification.
 
-Noted that bot was able to handle only one user.
+Bot was able to handle only one user for now.
 
 ### 5. Considering Webhook approach
 Polling approach worked well, but the bot asked for updates so frequently, that it looked like spamming Telegram API with requests. 
