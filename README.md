@@ -46,7 +46,42 @@ Deployed on AWS Lightsail instance (Ubuntu-based), using Cloudflare for domain m
 > Urgent info that needs immediate user attention to avoid problems.
 
 > [!CAUTION]
-> Advises about risks or negative outcomes of certain actions.
+> Advises about risks or negative outcomes of certain actions
+
+# 🚧 Development Steps
+### 1. Identify the problem and a way to solve it 
+Realized that monitoring multiple Telegram channels continuously is impractical.
+
+Creating an automated Telegram bot to monitor selected channels is a solution.
+
+How? By alerting users immediately if certain keywords (e.g., names of local towns or districts) appear, signaling potential danger nearby.
+### 2. Technologies Chosen
+Researched Telegram API and relevant libraries. Decided on the following tech stack:
++ Python
++ `telethon` (to be able to read messages from monitoring channels)
++ `python-telegram-bot` library for sending messages and managing user interaction.
+### 3. Telegram APIs
+Received api_id and api_hash for [Telegram client](https://core.telegram.org/api/obtaining_api_id).
+
+Via [@BotFather](https://t.me/botfather) created my bot and received bot_token as its unique identifier.
+
+> [!NOTE]
+> Here is my bot, by the way, [@irpinalert_bot](https://t.me/irpinalert_bot). I start it almost every evening only for the nighttime.
+
+
+### 3. Initial Bot Prototype 
+Developed the bot initially using polling (simpler implementation, more information).
+
+Set up Telegram handlers for bot commands (`/start` command).
+
+Created my own Telegram channel for testing notification.
+
+Noted that bot was able to handle only one user.
+
+FastAPI + Uvicorn to set up webhook communication with Telegram servers.
+Caddy webserver (reverse proxy) for securing HTTPS connections with Let's Encrypt certificates.
+AWS Lightsail server for reliable 24/7 deployment.
+
 
 ## 📌 **Code Versions**
 
