@@ -68,7 +68,7 @@ Received api_id and api_hash for [Telegram client](https://core.telegram.org/api
 Via [@BotFather](https://t.me/botfather) created my bot and received bot_token as its unique identifier.
 
 > [!NOTE]
-> Here is my bot, by the way, [@irpinalert_bot](https://t.me/irpinalert_bot). I start it almost every evening only for the nighttime.
+> Here is my bot, by the way, [@irpinalert_bot](https://t.me/irpinalert_bot). I start it almost every evening only for the nighttime (GMT+2).
 
 ### 4. Initial Bot Prototype 
 Developed the bot initially using polling (simpler implementation, more information).
