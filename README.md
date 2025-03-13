@@ -26,3 +26,27 @@ This bot tracks real-time messages from selected Telegram channels, scanning the
 + Caddy as a reverse proxy and automated TLS certificate management.
 # 🔹 Deployment and Infrastructure
 Deployed on AWS Lightsail instance (Ubuntu-based), using Cloudflare for domain management and Caddy for automatic HTTPS and reverse proxy handling.
+
+
+- [X] Add delight to the experience when all tasks are complete
+- [ ] gjjhbcj
+- [ ] jhbdsjcbj
+
+
+> [!NOTE]
+> Useful information that users should know, even when skimming content.
+
+> [!TIP]
+> Helpful advice for doing things better or more easily.
+
+> [!IMPORTANT]
+> Key information users need to know to achieve their goal.
+
+> [!WARNING]
+> Urgent info that needs immediate user attention to avoid problems.
+
+> [!CAUTION]
+> Advises about risks or negative outcomes of certain actions.
+
+
+
