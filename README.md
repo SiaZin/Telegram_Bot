@@ -68,8 +68,7 @@ Via [@BotFather](https://t.me/botfather) created my bot and received bot_token a
 > [!NOTE]
 > Here is my bot, by the way, [@irpinalert_bot](https://t.me/irpinalert_bot). I start it almost every evening only for the nighttime.
 
-
-### 3. Initial Bot Prototype 
+### 4. Initial Bot Prototype 
 Developed the bot initially using polling (simpler implementation, more information).
 
 Set up Telegram handlers for bot commands (`/start` command).
@@ -78,6 +77,18 @@ Created my own Telegram channel for testing notification.
 
 Noted that bot was able to handle only one user.
 
+### 5. Considering Webhook approach
+Polling approach worked well, but the bot asked for updates so frequently, that it looked like spamming Telegram API with requests. 
+> getUpdates is a pull mechanism
+> 
+> setWebhook is push
+
+I also had in mind, that my local computer will not do as a server for bot working at night (or if there is a problem with electricity in my region due to russian attacks). 
+So I choosed to relocate to cloud - AWS Lightsail.
+
+Setting a webhook on a new server was quite challenging, as it requires a lot of details to consider. But I did it anyway :smile:
+### 6. Refactor to Webhook
+Here is an official [guide](https://core.telegram.org/bots/webhooks) for the start.
 FastAPI + Uvicorn to set up webhook communication with Telegram servers.
 Caddy webserver (reverse proxy) for securing HTTPS connections with Let's Encrypt certificates.
 AWS Lightsail server for reliable 24/7 deployment.
