@@ -50,12 +50,12 @@ Deployed on AWS Lightsail instance (Ubuntu-based), using Cloudflare for domain m
 
 ## 📌 **Code Versions**
 
-| Step | Description | Link to File |
-|------|-------------|---------------|
-| Initial bot script (polling) | [`1_dronealertbot_polling.py`](scripts/1_dronealertbot_polling.py) |
-| Local webhook version (with Ngrok) | [`2_dronealertbot_webhook.py`](scripts/2_dronealertbot_webhook.py) |
-| Deployed webhook (AWS Lightsail) | [`3_dronealertbot_polling_new_features.py`](scripts/3_dronealertbot_polling_new_features.py) |
-| Final Stable Version | [`4_dronealertbot_webhook_new_features.py`](scripts/4_dronealertbot_webhook_new_features.py) |
+| Step | Description | 
+|------|-------------|
+| Initial bot script (polling) | [`1_dronealertbot_polling.py`](scripts/1_dronealertbot_polling.py) 
+| Initial bot script (webhook) | [`2_dronealertbot_webhook.py`](scripts/2_dronealertbot_webhook.py) 
+| Multiple users and location choice added (polling) | [`3_dronealertbot_polling_new_features.py`](scripts/3_dronealertbot_polling_new_features.py) 
+| Multiple users and location choice added (webhook) | [`4_dronealertbot_webhook_new_features.py`](scripts/4_dronealertbot_webhook_new_features.py) 
 
 
 
