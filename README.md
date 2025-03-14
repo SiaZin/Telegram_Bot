@@ -92,9 +92,9 @@ Debugged webhook communication between Telegram, Cloudflare (DNS), and AWS Light
 
 ### 7. Implemented User Interaction
 
-Added commands (/start, /location) to let users select their desired monitoring locations.
+Added command (/location) to let users select their desired monitoring locations.
 
-Stored user preferences and chats ids in a JSON file, ensuring persistence between server restarts.
+Stored users preferences and chats ids in a JSON file, ensuring persistence between server restarts. Now bot supports multiple users and remembers chosen locations.
 
 New features were implemented firstly with polling mechanism for ease of debugging.
 
