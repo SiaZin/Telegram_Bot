@@ -73,7 +73,7 @@ Via [@BotFather](https://t.me/botfather) created my bot and received bot_token a
 ### 4. Initial Bot Prototype 
 Developed the bot initially using polling (simpler implementation, more information).
 
-Set up Telegram handlers for bot commands (`/start` command).
+Set up Telegram handlers for bot command (`/start` command).
 
 Created my own Telegram channel for testing notification.
 
@@ -89,11 +89,35 @@ I also had in mind, that my local computer will not do as a server for bot worki
 So I choosed to relocate to cloud - AWS Lightsail.
 
 Setting a webhook on a new server was quite challenging, as it requires a lot of details to consider. But I did it anyway :smile:
-### 6. Refactor to Webhook
-Here is an official [guide](https://core.telegram.org/bots/webhooks) for the start.
-FastAPI + Uvicorn to set up webhook communication with Telegram servers.
-Caddy webserver (reverse proxy) for securing HTTPS connections with Let's Encrypt certificates.
-AWS Lightsail server for reliable 24/7 deployment.
+### 6. Refactor to Webhook and Cloud
+Official [webhook guide](https://core.telegram.org/bots/webhooks) helped for the start.
+
+Tech stack:
++ Ngrok for testing
++ FastAPI + Uvicorn for webserver setup
++ Caddy for TLS certificates and reverse proxy
+   
+Researched and tested webhook setup using Ngrok locally to understand webhook mechanics. 
+
+Created an Ubuntu instance on AWS Lightsail for reliable 24/7 deployment. Configured a static IPv4 address (IPv6 is not supported for Telegram webhooks).
+
+Installed Python packages in a virtual environment to maintain clean dependency management.
+
+Registered a domain name via Cloudflare and used it as DNS provider. 
+
+Installed and configured Caddy to automatically manage SSL certificates through Let's Encrypt and work as reverse proxy.
+
+Integrated FastAPI server on Lightsail to receive webhook updates.
+
+Debugged webhook communication between Telegram, Cloudflare (DNS), and AWS Lightsail server. Enabled 'Full' encryption mode in CloudFlare (not 'Flexible').
+
+Finally, ensured stable HTTPS connection end-to-end.
+
+### 7. Implemented User Interaction
+
+
+
+
 
 
 ## 📌 **Code Versions**
