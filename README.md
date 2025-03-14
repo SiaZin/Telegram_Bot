@@ -1,5 +1,3 @@
-# In process...
-
 # DroneAlert Telegram Bot 🛡️
 Unfortunately, drone attacks on Ukrainian territory occur daily. In my experience, Telegram monitoring channels are the most reliable sources of timely information during such attacks.
 
@@ -28,27 +26,6 @@ This bot tracks real-time messages from selected Telegram channels, scanning the
 + Caddy as a reverse proxy and automated TLS certificate management.
 # 🔹 Deployment and Infrastructure
 Deployed on AWS Lightsail instance (Ubuntu-based), using Cloudflare for domain management and Caddy for automatic HTTPS and reverse proxy handling.
-
-
-- [X] Add delight to the experience when all tasks are complete
-- [ ] gjjhbcj
-- [ ] jhbdsjcbj
-
-
-> [!NOTE]
-> Useful information that users should know, even when skimming content.
-
-> [!TIP]
-> Helpful advice for doing things better or more easily.
-
-> [!IMPORTANT]
-> Key information users need to know to achieve their goal.
-
-> [!WARNING]
-> Urgent info that needs immediate user attention to avoid problems.
-
-> [!CAUTION]
-> Advises about risks or negative outcomes of certain actions
 
 # 🚧 Development Steps
 ### 1. Identify the problem and a way to solve it 
@@ -111,14 +88,25 @@ Integrated FastAPI server on Lightsail to receive webhook updates.
 
 Debugged webhook communication between Telegram, Cloudflare (DNS), and AWS Lightsail server. Enabled 'Full' encryption mode in CloudFlare (not 'Flexible').
 
-Finally, ensured stable HTTPS connection end-to-end.
+- [X] Finally, ensured stable HTTPS connection end-to-end.
 
 ### 7. Implemented User Interaction
 
+Added commands (/start, /location) to let users select their desired monitoring locations.
 
+Stored user preferences and chats ids in a JSON file, ensuring persistence between server restarts.
 
+New features were implemented firstly with polling mechanism for ease of debugging.
 
+### 8. Deployment and Monitoring
 
+New features added to webhook version.
+
+Managed bot lifecycle with `tmux` on AWS Lightsail to keep bot running after SSH logout.
+
+Monitored memory and resource usage on AWS Lightsail to ensure stable performance. Used SWAP apace as Lightsails free instance has little RAM capacity.
+
+- [X]  Confirmed successful notification delivery when target words appeared in monitored channels.
 
 ## 📌 **Code Versions**
 
