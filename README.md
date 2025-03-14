@@ -11,20 +11,20 @@ If you'd like to create a similar bot for yourself, feel free to do so. I hope m
 
 Stay safe. 🌻🇺🇦
 
-# 🔹 Project Overview
+# Project Overview
 This bot tracks real-time messages from selected Telegram channels, scanning them for mentions of user-specified locations. Upon detecting predefined keywords, it immediately sends alerts to users, keeping them promptly informed of relevant drone activity.
 
-# 🔹 Key Features
+# Key Features
 + Real-time monitoring of Telegram channels via Telethon.
 + Webhook-based notifications. Tested using polling too.
 + Dynamic user preferences with customizable location monitoring (persisted in JSON format).
 + Designed for deployment: Tested locally and deployed on AWS Lightsail with HTTPS webhook enabled (using a reverse proxy via Caddy and Let’s Encrypt SSL certificates).
-# 🔹 Tech Stack
+# Tech Stack
 + `telethon` for interacting with Telegram API.
 + `python-telegram-bot` for bot interaction handling.
 + FastAPI + Uvicorn for lightweight webhook server.
 + Caddy as a reverse proxy and automated TLS certificate management.
-# 🔹 Deployment and Infrastructure
+# Deployment and Infrastructure
 Deployed on AWS Lightsail instance (Ubuntu-based), using Cloudflare for domain management and Caddy for automatic HTTPS and reverse proxy handling.
 
 # 🚧 Development Steps
